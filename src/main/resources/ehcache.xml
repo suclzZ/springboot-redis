@@ -1,0 +1,22 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+
+    <!-- 并非提供默认缓存策略，而是为下面的缓存提供默认属性配置 -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+    />
+
+    <cache name="cache_user"
+           eternal="false"
+           maxEntriesLocalHeap="0"
+           timeToIdleSeconds="200">
+    </cache>
+</ehcache>
